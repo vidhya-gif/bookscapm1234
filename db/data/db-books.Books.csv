@@ -1,0 +1,6 @@
+ID;title;author;price;publishedDate;digitalCopy
+550e8400-e29b-41d4-a716-446655440000;The Alchemist;Paulo Coelho;399.99;1988-05-01T00:00:00;true
+550e8400-e29b-41d4-a716-446655440001;Clean Code;Robert C. Martin;599.50;2008-08-01T00:00:00;true
+550e8400-e29b-41d4-a716-446655440002;The Pragmatic Programmer;Andrew Hunt;650.00;1999-10-30T00:00:00;false
+550e8400-e29b-41d4-a716-446655440003;Harry Potter and the Sorcerer's Stone;J.K. Rowling;450.75;1997-06-26T00:00:00;true
+550e8400-e29b-41d4-a716-446655440004;Introduction to Algorithms;Thomas H. Cormen;899.99;2009-07-31T00:00:00;false

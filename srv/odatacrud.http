@@ -1,0 +1,34 @@
+GET http://localhost:4004/odata/v4/library-srv/BooksSet
+
+###
+GET http://localhost:4004/odata/v4/library-srv/BooksSet
+
+###
+GET http://localhost:4004/odata/v4/library-srv/BooksSet(550e8400-e29b-41d4-a716-446655440003)
+
+###
+POST http://localhost:4004/odata/v4/library-srv/BooksSet
+Content-Type: application/json
+
+{
+  "title": "Refactoring",
+  "author": "Martin Fowler",
+  "price": 650.00,
+  "publishedDate": "2018-11-19T00:00:00Z",
+  "digitalCopy": true
+}
+
+###
+PUT http://localhost:4004/odata/v4/library-srv/BooksSet(550e8400-e29b-41d4-a716-446655440003)
+Content-Type: application/json
+
+{
+  "title": "Refactoring12345",
+  "author": "Martin Fowler",
+  "price": 44,
+  "publishedDate": "2018-11-19T00:00:00Z",
+  "digitalCopy": false
+}
+
+###
+DELETE http://localhost:4004/odata/v4/library-srv/BooksSet(550e8400-e29b-41d4-a716-446655440003)

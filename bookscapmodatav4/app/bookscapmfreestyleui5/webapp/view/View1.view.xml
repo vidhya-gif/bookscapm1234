@@ -1,0 +1,88 @@
+<mvc:View controllerName="bookscapmfreestyleui5.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+
+    <Link width = "30px"/>
+    <Link text = "Back" press="_backtoHome"/>
+    
+    <VBox>
+    <HBox>
+    <Button text ="Create new record" press="_CreateNewRecord"/>
+    <Button text = "Update record" press="_UpdateExistingRecord"/>
+    <Button text= "Delete record" press="_DeleteExistingRecord"/>
+    <Button text = "Batch updates" press = "_batchupdates"/>
+<Input id = "idBooksVH" showValueHelp="true" valueHelpRequest="_onBooksValueHelp"/>
+<Button icon = "sap-icon://refresh" press="_resetBooksTable"/>
+     </HBox>
+     <HBox>
+     <Button text = "Create with fragment" press="_createfragment"/>
+     <Button text = "HeaderItemCrud" press = "_headerItemCrud"/>
+     </HBox>
+    </VBox>
+    <Input id = "idtitle"/>
+    <Table id = "idBooksTable" items = "{bk>/BooksSet}" mode= "SingleSelectLeft"
+    selectionChange="_showChapter">
+    <columns>
+    <Column>
+    <Text text ="Title"></Text>
+  </Column>
+  <Column>
+    <Text text ="Author"></Text>
+  </Column>
+  <Column>
+    <Text text ="Price"></Text>
+  </Column>
+  <Column>
+    <Text text ="Published Date"></Text>
+  </Column>
+  <Column>
+    <Text text ="Gender"></Text>
+  </Column>
+  <Column>
+    <Text text ="Books Suitable for"></Text>
+  </Column>
+    </columns>   
+    <items>
+    <ColumnListItem type ="Navigation" press="onItemPress">
+     <cells>
+     <Text text = "{bk>title}"></Text>
+        <Text text = "{bk>author}"></Text>
+           <Text text = "{bk>price}"></Text>
+              <Text text = "{bk>publishedDate}"></Text>
+             <Text text = "{bk>gender}"></Text>
+                 <Text text = "{bk>ageGroup}"></Text>
+
+     </cells>
+    </ColumnListItem>
+
+    </items>
+     </Table>
+     <Table id="idChapterTable" items="{ch>/}">
+     
+     <headerToolbar>
+      <OverflowToolbar>
+      <content>
+      <Title text="Chapter" level = "H2" ></Title>
+      </content>
+      </OverflowToolbar>
+      </headerToolbar>
+      <columns>
+        <Column>
+          <Text text="Title"/>
+        </Column>
+         <Column>
+          <Text text="Pages"/>
+        </Column>
+      </columns>
+      <items>
+       <ColumnListItem>
+       <cells>
+         <Text text="{ch>title}"/>
+         <Text text="{ch>pages}"/>
+       </cells>
+       </ColumnListItem>
+      </items>
+     </Table>
+    </Page>
+</mvc:View>

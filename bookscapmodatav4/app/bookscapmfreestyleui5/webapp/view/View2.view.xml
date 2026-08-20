@@ -1,0 +1,23 @@
+<mvc:View controllerName="bookscapmfreestyleui5.controller.View2"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page2" title="Chapters">
+	<Link width ="30px"/>
+	<Link text = "Home" press = "_backHome"/>
+	<Link width = "30px"/>
+    <Link text = "Back" press="_backtoView1"/>
+	<Link width = "30px"/>
+	<Link text ="Cancel" press="_canceltoHome"/>
+     
+     <List 
+		headerText="Chapters"
+		headerLevel="H2"
+		items="{
+			path: 'chapters'
+		}" >
+		<StandardListItem
+			title="{title}"
+			counter="{pages}"/>
+	</List>
+      </Page>
+</mvc:View>

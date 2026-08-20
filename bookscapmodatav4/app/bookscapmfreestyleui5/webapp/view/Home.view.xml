@@ -1,0 +1,32 @@
+<mvc:View controllerName="bookscapmfreestyleui5.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Welcome">
+     <!-- Header Links -->
+     <headerContent>
+     <Button text = "Contact US" type = "Transparent" press="_onContact"/>
+     <Button text = "Login" type = "Transparent" press= "_onLogin"/>
+     <Button text = "Signup" type = "Transparent" press = "_onSignup"/>
+     </headerContent>
+
+     <!---Main Content-->
+
+     <content>
+     <VBox 
+     height = "100%"
+        justifyContent = "Center"
+        alignItems = "Center"
+        class = "sapUiLargeNargin">
+
+        <Title text = "Welcome Guest" level = "H1"/>
+        <Text text = "Explore as a Guest" class= "sapUiSamllMarginButton"/>
+
+        <Button text = "Books Library"
+            type = "Emphasized"
+            press = "onBooksLibrary"
+            width = "15rem"/>
+            </VBox>
+            </content>
+     </Page>
+</mvc:View>
